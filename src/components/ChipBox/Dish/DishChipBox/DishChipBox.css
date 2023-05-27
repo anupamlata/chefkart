@@ -1,0 +1,20 @@
+
+  .dish-chip-box{
+   position: absolute;
+  width: 92%; height: 100px;
+  left: 9%; top: 63%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  }
+
+  .dish-chip-box .dish-chip-scroll-bar{
+height:100%;
+  width:100%;
+  overflow-x: scroll;
+  }
+
+  .dish-chip-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }

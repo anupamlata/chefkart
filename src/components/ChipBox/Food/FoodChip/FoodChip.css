@@ -1,0 +1,13 @@
+
+.chip {
+   height: 30px;
+   width: 100px;
+   background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid #d3d2d2;
+  justify-content: center;
+  align-items: center;
+  margin: 0 12px 0 auto;
+  border: 2px solid orange;
+display:inline-block;
+}

@@ -1,0 +1,20 @@
+
+  .chip-box{
+   position: absolute;
+  width: 92%; height: 39px;
+  left: 9%; top: 36%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  }
+
+  .chip-box .chip-scroll-bar{
+height:100%;
+  width:100%;
+  overflow-x: scroll;
+  }
+
+  .chip-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
