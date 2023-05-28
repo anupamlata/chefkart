@@ -3,14 +3,14 @@ import FoodChip from '../FoodChip/FoodChip';
 import "./FoodChipBox.css";
 
 function FoodChipBox(props) {
-    const aaa = [1, 2,3,3,,3,3,,33,3,3]
+    const foodChipList = [{ name: "Indian" }, { name: "Italina" }, { name: "Chinese" }]
     return (
         <>
             <div className="chip-box">
                 <div className="chip-scroll-bar">
-                    {aaa.map((chip,index) => <FoodChip
-                    key={index}
-                        chipName={'Italina'}
+                    {foodChipList.map((chip, index) => <FoodChip
+                        key={index}
+                        chip={chip}
                     />)}
                 </div>
             </div>

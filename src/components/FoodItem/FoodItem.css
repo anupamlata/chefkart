@@ -1,0 +1,9 @@
+.appl-card{
+    display: flex;
+     flex-direction: column;
+     width:95px;
+     border-radius:14px;
+     height: 150px; 
+    margin-left:28px;
+    background-color:#F5F5F5;
+}

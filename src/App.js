@@ -1,13 +1,19 @@
 
 import './App.css';
-import Header from './Header';
-import Navbar from './Navbar';
+import Homepage from './Homepage';
+import FoodDetail from './FoodDetail';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-     <Header />
-     <Navbar />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" exact element={<Homepage/>} />
+        <Route path="/:id" exact element={<FoodDetail/>} />
+      </Routes>
+    </BrowserRouter>
+     
      </div>
   );
 }

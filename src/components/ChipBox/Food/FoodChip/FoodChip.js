@@ -4,7 +4,7 @@ import './FoodChip.css';
 function FoodChip(props) {
     return (
         <div className='chip'>
-            <div>{props.chipName}</div>
+            <div>{props.chip.name}</div>
         </div>
     )
 }

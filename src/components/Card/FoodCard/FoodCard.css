@@ -1,0 +1,16 @@
+.veg-col {
+    background-color: green;
+}
+.badge_ {
+        display: inline-block;
+        padding: 0.001em 0.25em 0.01em 1.2em;
+        font-size: 1.05em;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        height: 34px;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 0.85rem;
+}

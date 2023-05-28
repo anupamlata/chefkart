@@ -1,10 +1,13 @@
 import React from 'react'
 import './Header.css';
-function Header() {
+import { useNavigate } from 'react-router-dom';
+
+function Header(props) {
+  const navigate = useNavigate();
   return (
-    <div className='header'>
+    <div onClick={()=> props.from==="food-detail" ? navigate("/") : null } className='header'>
         <i className="fa fa-chevron-left"></i>
-        <span className="text">Select Dishes</span>
+        <span className="text">{props.title}</span>
     </div>
   )
 }

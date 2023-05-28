@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Navbar.css";
 import FoodChipBox from './components/ChipBox/Food/FoodChipBox/FoodChipBox';
 import DishChipBox from './components/ChipBox/Dish/DishChipBox/DishChipBox';
+import DishList from './components/Card/FoodList/DishList';
+import axios from 'axios';
+import Header from './Header';
+import moment from 'moment';
 
-function Navbar() {
+function Homepage() {
+
+    const [dishes, setDishes] = useState([]);
+    const [popularDishes, setPopularDishes] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get('https://8b648f3c-b624-4ceb-9e7b-8028b7df0ad0.mock.pstmn.io/dishes/v1/');
+      console.log("result",request);
+      setDishes(request.data.dishes);
+      setPopularDishes(request.data.popularDishes)
+    }
+    fetchData();
+  }, [])
+
+  console.log('popularDishes suraj :::: ',popularDishes)
     return (
+        <>
+        <Header title="Select Dishes" from="homepage"/>
         <div className="card mb-3" style={{ maxWidth: "100%" }}>
             <div className="card-header" style={{ backgroundColor: "black", minHeight: "8vh" }}></div>
             <div style={{ width: "100vw" }}>
@@ -13,7 +33,8 @@ function Navbar() {
 
                     <div style={{ display: "flex", alignSelf: "center", justifyContent: "space-between" }}>
                         <div className="vr2">
-                            asdasbdfj
+                        <i className="fa fa-calendar" aria-hidden="true"></i>
+{moment().format('MMMM Do YYYY')}
                         </div>
                         <div style={{
                             width: "2px",
@@ -23,7 +44,8 @@ function Navbar() {
                             display: "flex"
                         }} className="vr "></div>
                         <div className="vr3">
-                            helloaslkfjlksjfklsdj
+                       <img height="20" weight="30" src="alarm-clock.png" alt="alarm"/>
+                        {moment().format("hh:mm A")}-{moment().add(2, 'hours').format('hh:mm A')}
                         </div>
                     </div>
 
@@ -33,22 +55,22 @@ function Navbar() {
 
 
             <div style={{ backgroundColor: "green", minHeight: "40vh" }}>
-                <FoodChipBox/>
+                <FoodChipBox />
                 <h1 className='mt-5'>hello</h1>
-                <DishChipBox/>
-
-
-
-
+                <DishChipBox 
+                popularDishes={popularDishes}
+                />
             </div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}/* style={{ backgroundColor: "red", minHeight: "7vh", display: "flex", justifyContent: "space-between", justifyContent: "center",
-    textAlign: "center" }} */>
-                {/* <div className="d-flex justify-content-between"> */}
+
+
+
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div style={{
                     margin: "15px -2px -13px 15px",
                     display: "flex",
-                    textAlign: "center",
-                    justifyContent: "center"
+                    flexDirection: "row",
+                    // textAlign: "center",
+                    // justifyContent: "center"
                 }}><p style={{
                     fontSize: "20px",
                     fontWeight: "800",
@@ -58,13 +80,18 @@ function Navbar() {
                     </p>
                     <i className="fa fa-caret-down recommended-caret" aria-hidden="true"></i>
                 </div>
-                <span >
-
-                    <button style={{ margin: "-4px 15px 3px 0px" }} type="button" className="btn btn-dark btn-sm ">Menu</button>
+                <span>
+                    <button style={{ margin: "21px 34px 11px 15px" }} type="button" className="btn btn-dark btn-sm ">Menu</button>
                 </span>
             </div>
+
         </div>
+
+        <DishList
+        dishes={dishes}
+        />
+        </>
     )
 }
 
-export default Navbar
+export default Homepage

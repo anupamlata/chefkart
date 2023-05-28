@@ -5,14 +5,18 @@
  background-color: #fff;
 border-radius: 50px;
 border: 1px solid #d3d2d2;
-/* justify-content: center;
-align-items: center; */
 margin: 0 12px 0 auto;
 border: 1px solid orange;
-/* background: red; */
 display:inline-block;
-/* margin: 0 auto; */
 text-align: center;
-/* clear: left; */
-background-image: url("../../../../../public/biryani.png");
+position: relative;
+left: 10px;
+}
+
+.chip-label{
+    color: white;
+    position: absolute;
+    top: 22px;
+    font-size: 15px;
+    font-weight: 600;
 }
