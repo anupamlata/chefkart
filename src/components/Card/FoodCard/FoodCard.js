@@ -5,105 +5,75 @@ import { useNavigate } from 'react-router-dom';
 
 function FoodCard(props) {
     const navigate = useNavigate();
-    // console.log(props);
-
     return (
         <>
-      
-        <div  onClick= {() => navigate(`/${props?.dish?.id}`)} className="row">
-            <div className="col-md-6 mb-3">
-                {/* <div className="card"> */}
-                    <div className="" style={{ display: "flex", flexDirection: "row", }}>
-                        <div className="row">
-<div className="col-sm-8">
-    <div className="row">
-        <div className="col-8">
- <div style={{ display: "flex", flexDirection: "row",alignItems: "flex-start" }}>
-                            <h3>{props.dish.name}</h3>
-                            <img height="30" weight="30" src="circle-inside-square-svgrepo-com.svg" alt="hi" />
-                            <img height="30" weight="30" src="circle-inside-square-svgrepo-com.svg" alt="hi" />
-                        </div>
-                        </div> 
-                        
-    </div>
-</div>
-<div className="col-sm-4">
-<img height="10" width="10" src="food.png" alt="food-image" />
-</div>
-                        </div>
-                       
-                        {/* <span>
-                            <div >
-                                <div className="row mt-5 ms-3">
-                                    refrigerator
-                                    refrigerator
-                                </div>
-                                <div style={{
-                                    width: "2px",
-                                    justifyContent: "center",
-                                    backgroundColor: "#d8d0d0",
-                                    height: "55px",
-                                    display: "flex", marginLeft: "200px"
-                                }} className="vr "></div>
-                                <div>Ingredient</div>
+            <div onClick={() => navigate(`/${props?.dish?.id}`)}>
+                <div className='food-card mb-3'>
+                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", border: "1px solid red" }}>
+                        <div>
+                            <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+                                <span style={{ fontSize: "16px", fontWeight: "700" }}>{props.dish.name}</span>
+                                <img style={{ marginLeft: "4px" }} height="15" weight="20" src="circle-inside-square.svg" alt="veg_show" />
+                                <span style={{ color: "white", backgroundColor: "#51C452", marginLeft: "4px" }} className="badge">{props.dish.rating}</span>
+
+
                             </div>
 
-                            <p className="row mt-5">
-                                Chicken fried in deep tomato sauce with delicious spices
-                            </p>
 
-                        </span> */}
-                        {/* <span style={{ marginLeft: "30vh" }}><img height="130" width="130" src="food.png" alt="food-image" /></span> */}
-                        {/* <a href="#" class="btn btn-primary"></a> */}
-                    </div>
-                {/* </div> */}
-            </div >
-            {/* <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <div style={{ display: "flex", flexDirection: "row", marginTop: "12px" }}>
+
+                                {props.dish.equipments.map((equip, index) => (
+
+                                    <div key={index} style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", marginRight: "10px" }}>
+                                        <img width="20" height="25" src="refrigerator.png" alt='appliance' />
+                                        <span style={{ fontSize: "8px" }}>{equip}</span>
+                                    </div>
+
+                                ))}
+
+                                <div style={{
+                                    width: "1px",
+                                    justifyContent: "center",
+                                    backgroundColor: "#d8d0d0",
+                                    height: "35px",
+                                    display: "flex"
+                                }} className="vr "></div>
+
+
+                                <div style={{marginLeft:"12px"}}>
+                                    <div style={{fontSize:"12px",fontWeight:"700"}}>
+                                    Ingredients
+                                        </div>
+                                    <div style={{fontSize:"8px",textAlign:"start",fontWeight:"700",color:"orange",marginTop:"-7px",cursor:"pointer"}}>
+                                    View list
+<span style={{marginLeft:"-9px"}}>
+<i className="fa fa-chevron-right"></i>
+</span>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style={{ margin: "5px 18px 0px 0px", lineHeight: "1", textAlign: "start", border: "1px solid red" }}>
+                                {props.dish.description}
+                            </div>
+                        </div>
+
+                        <div>
+                        <img className="food-card-img" width="120" height="130" src={props.dish.image} alt="foodcard" />
+
+                            <div style={{ margin: "-12px" }}>
+                                <button className="add-btn">
+                                    <span> Add </span>
+                                    <div className='plus-btn'>+</div>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> */}
-        </div >
+            </div>
+            <hr />
         </>
-        
-
-        // <>
-        //     <div style={{ height: "22px" }}>
-        //         <div className="row ">
-        //             <div className="col-sm-8">
-        //                 {/* <div className="row"> */}
-        //                     <div style={{ display: "flex", flexDirection: "row", }}>
-        //                         {/* <div className="row"> */}
-        //                         <h3>Masala Muglai</h3>
-        //                         <img height="30" weight="30" src="circle-inside-square-svgrepo-com.svg" alt="hi" />
-        //                         {/* <span className="badge badge-sm veg-col">4.2<i className="fa fa-star" aria-hidden="true"></i>
-        //                         </span> */}
-        //                     </div>
-        //                 {/* </div> */}
-
-
-        //                 {/* <div className="row"> */}
-        //                     refrigerator
-        //                     refrigerator
-        //                 {/* </div> */}
-
-        //                 {/* <div className="row"> */}
-        //                     refrigerator
-        //                     refrigerator
-        //                 {/* </div> */}
-        //             </div>
-        //             {/* </div> */}
-        //             <div className="col-sm-4">
-        //                 <img height="60" width="60" src="food.png" alt="food-image" />
-        //             </div>
-        //         </div>
-
-        //     </div>
-        // </>
     )
 }
 

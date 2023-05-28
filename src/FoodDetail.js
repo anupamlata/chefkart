@@ -26,13 +26,13 @@ function FoodDetail(props) {
         {foodDetail.name}
       </h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic esse quo porro libero, dignissimos repellendus.</p>
-      <i style={{ fontSize: "xx-large" }} class="fa fa-clock-o" aria-hidden="true">{foodDetail.timeToPrepare
+      <i style={{ fontSize: "xx-large" }} className="fa fa-clock-o" aria-hidden="true">{foodDetail.timeToPrepare
       }</i>
 
       <hr />
 
       <>
-        <h4>Vegetables ({foodDetail?.ingredients?.vegetables.length}) <i class="fa fa-caret-down" aria-hidden="true"></i></h4>
+        <h4>Vegetables ({foodDetail?.ingredients?.vegetables.length}) <i className="fa fa-caret-down" aria-hidden="true"></i></h4>
         {foodDetail?.ingredients?.vegetables.map((vegetable, index) => <FoodItem
           type="vegetables"
           key={index}
@@ -42,7 +42,7 @@ function FoodDetail(props) {
       </>
 
       <>
-        <h4>Spices ({foodDetail?.ingredients?.spices.length}) <i class="fa fa-caret-down" aria-hidden="true"></i></h4>
+        <h4>Spices ({foodDetail?.ingredients?.spices.length}) <i className="fa fa-caret-down" aria-hidden="true"></i></h4>
         {foodDetail?.ingredients?.spices.map((spice, index) => <FoodItem
           type="spices"
           key={index}
@@ -53,7 +53,7 @@ function FoodDetail(props) {
 
 
       <>
-        <h4>Appliances  <i class="fa fa-caret-down" aria-hidden="true"></i></h4>
+        <h4>Appliances  <i className="fa fa-caret-down" aria-hidden="true"></i></h4>
         <div style={{ display: "flex", flexDirection: "row", }}>
 
 

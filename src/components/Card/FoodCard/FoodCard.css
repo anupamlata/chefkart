@@ -1,16 +1,42 @@
 .veg-col {
     background-color: green;
 }
-.badge_ {
-        display: inline-block;
-        padding: 0.001em 0.25em 0.01em 1.2em;
-        font-size: 1.05em;
-        font-weight: 700;
-        line-height: 1;
-        color: #fff;
-        text-align: center;
-        height: 34px;
-        white-space: nowrap;
-        vertical-align: baseline;
-        border-radius: 0.85rem;
+
+.food-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    height: 150px;
+    margin: 25px;
+    padding: -1px;
+    background-color: white;
 }
+
+.food-card-img {
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.add-btn {
+    background-color: #FFFFFF; 
+    border: 2px solid #FF9720;
+    color: #FF9720;
+    border-radius: 6px;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: -6px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+ .plus-btn{
+    float: right;
+    top: -9px;
+    right: -10px;
+    position: relative;
+ }
