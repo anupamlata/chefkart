@@ -24,64 +24,45 @@ function Homepage() {
         <>
             <Header title="Select Dishes" from="homepage" />
             <div className="card mb-3" style={{ maxWidth: "100%" }}>
-                <div className="card-header" style={{ backgroundColor: "black", minHeight: "8vh" }}></div>
-                <div style={{ width: "100vw" }}>
-                    <div className='card box-status'>
-
-
+                <div className="card-header black-header"></div>
+                <div className='header-1'>
+                    <div className='card box-status header-2'>
                         <div style={{ display: "flex", alignSelf: "center", justifyContent: "space-between" }}>
-                            <div className="vr2">
-                                <i className="fa fa-calendar" aria-hidden="true"></i>
-                                {moment().format('MMMM Do YYYY')}
+                            <div>
+                                <span  className="vr2">
+                                    <i className="fa fa-none fa-sm fa-md fa-calendar" aria-hidden="true"></i>
+                                    {moment().format('MMMM Do YYYY')}
+                                </span>
                             </div>
-                            <div style={{
-                                width: "2px",
-                                justifyContent: "center",
-                                backgroundColor: "#d8d0d0",
-                                height: "55px",
-                                display: "flex"
-                            }} className="vr "></div>
-                            <div className="vr3">
-                                <img height="20" weight="30" src="alarm-clock.png" alt="alarm" />
-                                {moment().format("hh:mm A")}-{moment().add(2, 'hours').format('hh:mm A')}
+                            <div  className="vr "></div>
+                            <div>
+                                <span className="vr3">
+                                    <img height="20" weight="30" src="alarm-clock.png" alt="alarm" />
+                                    {moment().format("hh:mm A")}-{moment().add(2, 'hours').format('hh:mm A')}
+                                </span>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
-
-                <div style={{ backgroundColor: "pink", minHeight: "40vh" }}>
+                <div className='back'>
                     <FoodChipBox />
-                    <h1 className='mt-5'>hello</h1>
+                    <div>
+                    </div>
                     <DishChipBox
                         popularDishes={popularDishes}
                     />
                 </div>
 
-
-
-
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <div style={{
-                        margin: "15px -2px -13px 15px",
-                        display: "flex",
-                        flexDirection: "row",
-                    }}><p style={{
-                        fontSize: "20px",
-                        fontWeight: "800",
-                        color: "black"
-                    }}>
+                <hr className='hr1'/>
+                <div className='div-1'>
+                    <div className='div-2'>
+                        <p className='para'>
                             Recommended
                         </p>
                         <i className="fa fa-caret-down recommended-caret" aria-hidden="true"></i>
                     </div>
                     <span>
-                        <button style={{
-                            margin: "21px 34px 11px 15px", borderRadius: "10px",
-                            width: "80px"
-                        }} type="button" className="btn btn-dark btn-sm ">Menu</button>
+                        <button type="button" className="btn btn-dark btn-sm btn-xs btn3">Menu</button>
                     </span>
                 </div>
 
@@ -95,5 +76,3 @@ function Homepage() {
 }
 
 export default Homepage
-// overflow: auto;
-// text-align: justify;

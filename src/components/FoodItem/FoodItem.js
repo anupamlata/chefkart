@@ -17,10 +17,10 @@ function FoodItem(props) {
           </>
           :
           <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }} >
-            <div className='ms-4'>
+            <div style={{textAlign:"start",marginLeft:"5vh",fontWeight:300}} className='mt-2 mb-1'>
               {props.item.name}
             </div>
-            <div className='me-4'>
+            <div  style={{textAlign:"end",marginRight:"5vh",fontWeight:300}} className='mt-2 mb-1'>
               {props.item.quantity}
             </div>
           </div>

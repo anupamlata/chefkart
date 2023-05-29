@@ -40,3 +40,59 @@
     right: -10px;
     position: relative;
  }
+ .food-div{
+    display: flex;
+     flex-direction: row;
+      justify-content: space-between;
+ }
+ .food-div1{
+    flex-direction: row;
+     justify-content: center;
+     text-align:start;
+     margin-right:15vh;
+ }
+ .food-span{
+    font-size: 16px;
+     font-weight: 700;
+ }
+ .food-span1{
+    color: white;
+     background-color: #51C452;
+      margin-left: 4px;
+ }
+ .food-div2{
+    display: flex;
+     flex-direction: row;
+      margin-top: 12px;
+ }
+ .food-div3{
+    display: flex;
+     justify-content: center;
+      align-items: center;
+       flex-direction: column;
+        margin-right: 10px; 
+ }
+ .food-div4{
+    width: 1px;
+    justify-content: center;
+    background-color: #d8d0d0;
+    height: 35px;
+    display: flex;
+ }
+ .food-div5{
+    font-size: 12px;
+     font-weight: 700;
+ }
+ .food-div6{
+    font-size: 8px;
+     text-align: start;
+      font-weight: 700;
+       color: orange;
+        margin-top: -7px;
+         cursor: pointer;
+ } 
+ .food-div7{
+    margin: 5px 18px 0px 0px;
+     line-height: 1;
+      text-align: start;
+ }

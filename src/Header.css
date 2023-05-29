@@ -1,5 +1,5 @@
 .header{
-    min-height: 13vh;
+    min-height: 8vh;
     background-color:white;
     align-items: end;
     display: flex;
@@ -9,4 +9,11 @@ i,.text{
     margin-bottom: 20px;
     margin-left: 15px;
     margin-right: 18px;
+}
+.style{
+    text-align:start;
+    margin-left:5vh;
+    font-weight: 500;
+    font-size: larger;
+    margin-top: 2vh;
 }
