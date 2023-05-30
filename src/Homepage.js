@@ -29,17 +29,17 @@ function Homepage() {
                     <div className='card box-status header-2'>
                         <div style={{ display: "flex", alignSelf: "center", justifyContent: "space-between" }}>
                             <div>
-                                <span  className="vr2">
+                                <div style={{ "marginTop": "17px"}} className="vr2">
                                     <i className="fa fa-none fa-sm fa-md fa-calendar" aria-hidden="true"></i>
                                     {moment().format('MMMM Do YYYY')}
-                                </span>
+                                </div>
                             </div>
-                            <div  className="vr "></div>
+                            <div className="vr "></div>
                             <div>
-                                <span className="vr3">
-                                    <img height="20" weight="30" src="alarm-clock.png" alt="alarm" />
+                                <div style={{ "marginTop": "19px"}} className="vr3">
+                                    <img height="20" style={{marginRight:"12px"}} weight="30" src="alarm-clock.png" alt="alarm" />
                                     {moment().format("hh:mm A")}-{moment().add(2, 'hours').format('hh:mm A')}
-                                </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ function Homepage() {
                     />
                 </div>
 
-                <hr className='hr1'/>
+                <hr className='hr1' />
                 <div className='div-1'>
                     <div className='div-2'>
                         <p className='para'>

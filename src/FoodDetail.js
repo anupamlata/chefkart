@@ -21,27 +21,33 @@ function FoodDetail(props) {
   console.log(foodDetail);
   return (
     <>
-      <Header title="" from="food-detail"/>
-      <h1 style={{ marginRight: "90px",fontWeight:"900" ,textAlign:"start",marginLeft:"5vh"}}>
-        {foodDetail.name}
-</h1>
-        {/* <span style={{ color: "white", backgroundColor: "#51C452", marginLeft: "4px" }} className="badge">4.3</span> */}
+      <Header title="" from="food-detail" />
+      <div style={{backgroundImage:"url("+'food-dp.jpeg'+")"}}>
 
-      
-      <p style={{fontWeight:"100",textAlign:"start",marginLeft:"5vh",marginRight: "8vh"}}>Mughlai Masala is a style of cookery developed in the India Subcontinent by the Imperial kitchens of the Mughal Empire.</p>
-      <div style={{textAlign:"initial",marginLeft:"3.3vh"}}>
-      <i className="fa fa-clock-o" aria-hidden="true"> <span>{foodDetail.timeToPrepare
-      }</span></i>
+      <h1 style={{ marginRight: "90px", fontWeight: "900", textAlign: "start", marginLeft: "5vh" }}>
+        {foodDetail.name}
+      </h1>
+
+      <p style={{ fontWeight: "100", textAlign: "start", marginLeft: "5vh", marginRight: "8vh" }}>Mughlai Masala is a style of cookery developed in the India Subcontinent by the Imperial kitchens of the Mughal Empire.</p>
+      <div style={{ textAlign: "initial", marginLeft: "3.3vh" }}>
+        <i className="fa fa-clock-o" aria-hidden="true"> <span>{foodDetail.timeToPrepare
+        }</span></i>
       </div>
 
-<hr  style={{textAlign:"start",textAlign:"end",marginRight:"5vh",height:"3px",color:"lightgrey"}}/>
-     <div style={{textAlign:"start",marginLeft:"5vh"}}>
-      <h3 style={{fontSize: "x-large",
-    fontWeight: "600"}}>Ingredients</h3>
-      <p style={{fontSize: "x-small",
-    fontWeight: "200"}}>For 2 people</p>
-     </div>
-      <hr  style={{textAlign:"start",textAlign:"end",marginRight:"5vh",marginLeft:"5vh"}}/>
+</div>
+
+      <hr style={{ textAlign: "start", textAlign: "end", marginRight: "5vh", height: "3px", color: "lightgrey" }} />
+      <div style={{ textAlign: "start", marginLeft: "5vh" }}>
+        <h3 style={{
+          fontSize: "x-large",
+          fontWeight: "600"
+        }}>Ingredients</h3>
+        <p style={{
+          fontSize: "x-small",
+          fontWeight: "200"
+        }}>For 2 people</p>
+      </div>
+      <hr style={{ textAlign: "start", textAlign: "end", marginRight: "5vh", marginLeft: "5vh" }} />
 
       <>
         <h4 className='style'>Vegetables ({foodDetail?.ingredients?.vegetables.length}) <i className="fa fa-caret-down" aria-hidden="true"></i></h4>
@@ -65,8 +71,10 @@ function FoodDetail(props) {
 
 
       <>
-        <h4 style={{marginTop:"2vh",marginBottom:"3vh",textAlign:"start",fontSize: "x-large",
-    fontWeight: "600",marginLeft:"5vh"}}>Appliances </h4>
+        <h4 style={{
+          marginTop: "2vh", marginBottom: "3vh", textAlign: "start", fontSize: "x-large",
+          fontWeight: "600", marginLeft: "5vh"
+        }}>Appliances </h4>
         <div style={{ display: "flex", flexDirection: "row", }}>
 
 
